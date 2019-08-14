@@ -15,6 +15,8 @@ public enum RxWCSessionError: Error {
 }
 
 public class RxWCSession {
+    
+    // Session states
     public var activationState: Observable<WCSessionActivationState> {
         return .deferred { [delegate, session] in
             return delegate.activationDidComplete
@@ -37,6 +39,20 @@ public class RxWCSession {
                 .map { [session] _ in session.outstandingFileTransfers }
                 .startWith(session.outstandingFileTransfers)
         }
+    }
+    
+    // Receiving data
+
+    public var didReceiveMessage: Observable<[String: Any]> {
+        return delegate.didReceiveMessage
+    }
+
+    public var didReceiveMessageWithReplyHandler: Observable<([String: Any], ([String : Any]) -> Void)> {
+        return delegate.didReceiveMessageWithReplyHandler
+    }
+
+    public var didReceiveMessageData: Observable<Data> {
+        return delegate.didReceiveMessageData
     }
 
     private let session: WCSession
@@ -76,7 +92,7 @@ public class RxWCSession {
             }
     }
 
-    public func sendMessage(_ message: [String: Any], waitForSession: Bool = true) -> Observable<Void> {
+    public func sendMessageWithoutReply(_ message: [String: Any], waitForSession: Bool = true) -> Observable<Void> {
         let sendMessage = Observable<Void>.create { [session] observer in
             session.sendMessage(message, replyHandler: nil, errorHandler: { error in
                 observer.onError(error)
@@ -109,7 +125,7 @@ public class RxWCSession {
             }
     }
 
-    public func send(messageData: Data, waitForSession: Bool = true) -> Observable<Void> {
+    public func sendWithoutReply(messageData: Data, waitForSession: Bool = true) -> Observable<Void> {
         let sendMessageData = Observable<Void>.create { [session] observer in
             session.sendMessageData(messageData, replyHandler: nil, errorHandler: { error in
                 observer.onError(error)

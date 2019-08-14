@@ -8,13 +8,16 @@
 
 import WatchKit
 import Foundation
-
+import RxSwift
+import RxWatchConnectivity
 
 class InterfaceController: WKInterfaceController {
+    let session = RxWCSession()
 
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        
+
+        session.activate()
         // Configure interface objects here.
     }
     
