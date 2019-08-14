@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3EDB3433230332AC009451C8"
-               BuildableName = "RxWatchConnectivity_iOS.framework"
+               BuildableName = "RxWatchConnectivity.framework"
                BlueprintName = "RxWatchConnectivity iOS"
                ReferencedContainer = "container:RxWatchConnectivity.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3EDB3433230332AC009451C8"
-            BuildableName = "RxWatchConnectivity_iOS.framework"
+            BuildableName = "RxWatchConnectivity.framework"
             BlueprintName = "RxWatchConnectivity iOS"
             ReferencedContainer = "container:RxWatchConnectivity.xcodeproj">
          </BuildableReference>
@@ -65,7 +65,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3EDB3433230332AC009451C8"
-            BuildableName = "RxWatchConnectivity_iOS.framework"
+            BuildableName = "RxWatchConnectivity.framework"
             BlueprintName = "RxWatchConnectivity iOS"
             ReferencedContainer = "container:RxWatchConnectivity.xcodeproj">
          </BuildableReference>
@@ -83,7 +83,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3EDB3433230332AC009451C8"
-            BuildableName = "RxWatchConnectivity_iOS.framework"
+            BuildableName = "RxWatchConnectivity.framework"
             BlueprintName = "RxWatchConnectivity iOS"
             ReferencedContainer = "container:RxWatchConnectivity.xcodeproj">
          </BuildableReference>

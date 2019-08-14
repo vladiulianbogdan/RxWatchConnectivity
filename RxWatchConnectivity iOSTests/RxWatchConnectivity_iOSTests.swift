@@ -6,7 +6,7 @@
 //
 
 import XCTest
-@testable import RxWatchConnectivity_iOS
+@testable import RxWatchConnectivity
 
 class RxWatchConnectivity_iOSTests: XCTestCase {
 

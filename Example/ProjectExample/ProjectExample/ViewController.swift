@@ -41,10 +41,13 @@ class ViewController: UIViewController {
     }
 
     @IBAction func sendMessageButtonPressed() {
-        session.sendMessage(["text": messageTextField.text!])
-            .subscribe(onNext: { messageReceived in
-                print(messageReceived)
+        session.sendMessage(["test": messageTextField.text!])
+            .subscribe(onSuccess: { response in
+                print(response)
+            }, onError: { error in
+                print(error)
             })
+            .disposed(by: disposeBag)
     }
 }
 

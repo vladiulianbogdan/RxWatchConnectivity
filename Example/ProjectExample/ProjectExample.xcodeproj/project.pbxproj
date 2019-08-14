@@ -21,18 +21,22 @@
 		3EDB34C92304549A009451C8 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDB34C82304549A009451C8 /* ExtensionDelegate.swift */; };
 		3EDB34CB2304549A009451C8 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDB34CA2304549A009451C8 /* NotificationController.swift */; };
 		3EDB34CD2304549B009451C8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3EDB34CC2304549B009451C8 /* Assets.xcassets */; };
-		3EDB34F723045669009451C8 /* RxWatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EDB34F123045653009451C8 /* RxWatchConnectivity.framework */; };
-		3EDB34F823045669009451C8 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EDB34EF2304564C009451C8 /* RxSwift.framework */; };
-		3EDB34F923045674009451C8 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EDB34F523045661009451C8 /* RxSwift.framework */; };
-		3EDB34FA23045674009451C8 /* RxWatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EDB34F32304565B009451C8 /* RxWatchConnectivity.framework */; };
-		3EDB34FB2304567D009451C8 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EDB34F523045661009451C8 /* RxSwift.framework */; };
-		3EDB34FC2304567D009451C8 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3EDB34F523045661009451C8 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3EDB34FD2304567D009451C8 /* RxWatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EDB34F32304565B009451C8 /* RxWatchConnectivity.framework */; };
-		3EDB34FE2304567D009451C8 /* RxWatchConnectivity.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3EDB34F32304565B009451C8 /* RxWatchConnectivity.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3EDB350023045685009451C8 /* RxWatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EDB34F123045653009451C8 /* RxWatchConnectivity.framework */; };
-		3EDB350123045685009451C8 /* RxWatchConnectivity.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3EDB34F123045653009451C8 /* RxWatchConnectivity.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3EDB350223045685009451C8 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EDB34EF2304564C009451C8 /* RxSwift.framework */; };
-		3EDB350323045685009451C8 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3EDB34EF2304564C009451C8 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3EDB354723046C0E009451C8 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EDB353D23046BED009451C8 /* RxCocoa.framework */; };
+		3EDB354823046C0E009451C8 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EDB353E23046BED009451C8 /* RxRelay.framework */; };
+		3EDB354923046C0E009451C8 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EDB352F23046AEE009451C8 /* RxSwift.framework */; };
+		3EDB354A23046C17009451C8 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3EDB353D23046BED009451C8 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3EDB354B23046C17009451C8 /* RxRelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3EDB353E23046BED009451C8 /* RxRelay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3EDB354C23046C17009451C8 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3EDB352F23046AEE009451C8 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3EDB354D23046C1E009451C8 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EDB354123046BF8009451C8 /* RxCocoa.framework */; };
+		3EDB354E23046C1E009451C8 /* RxRelay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EDB354223046BF8009451C8 /* RxRelay.framework */; };
+		3EDB354F23046C1E009451C8 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EDB354323046BF8009451C8 /* RxSwift.framework */; };
+		3EDB355023046C24009451C8 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3EDB354123046BF8009451C8 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3EDB355123046C24009451C8 /* RxRelay.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3EDB354223046BF8009451C8 /* RxRelay.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3EDB355223046C24009451C8 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3EDB354323046BF8009451C8 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3EDB357E23046E65009451C8 /* RxWatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EDB357923046D5E009451C8 /* RxWatchConnectivity.framework */; };
+		3EDB357F23046E6B009451C8 /* RxWatchConnectivity.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3EDB357923046D5E009451C8 /* RxWatchConnectivity.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3EDB358223046E88009451C8 /* RxWatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EDB357523046D5E009451C8 /* RxWatchConnectivity.framework */; };
+		3EDB358323046E8C009451C8 /* RxWatchConnectivity.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3EDB357523046D5E009451C8 /* RxWatchConnectivity.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +60,41 @@
 			proxyType = 1;
 			remoteGlobalIDString = 3EDB34C02304549A009451C8;
 			remoteInfo = "ProjectExample WatchKit Extension";
+		};
+		3EDB357423046D5E009451C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3EDB356E23046D5E009451C8 /* RxWatchConnectivity.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3EDB3434230332AC009451C8;
+			remoteInfo = "RxWatchConnectivity iOS";
+		};
+		3EDB357623046D5E009451C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3EDB356E23046D5E009451C8 /* RxWatchConnectivity.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3EDB343D230332AC009451C8;
+			remoteInfo = "RxWatchConnectivity iOSTests";
+		};
+		3EDB357823046D5E009451C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3EDB356E23046D5E009451C8 /* RxWatchConnectivity.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3EDB3451230332ED009451C8;
+			remoteInfo = "RxWatchConnectivity watchOS";
+		};
+		3EDB357C23046E46009451C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3EDB356E23046D5E009451C8 /* RxWatchConnectivity.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 3EDB3433230332AC009451C8;
+			remoteInfo = "RxWatchConnectivity iOS";
+		};
+		3EDB358023046E73009451C8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3EDB356E23046D5E009451C8 /* RxWatchConnectivity.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 3EDB3433230332AC009451C8;
+			remoteInfo = "RxWatchConnectivity iOS";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -88,8 +127,10 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				3EDB34FC2304567D009451C8 /* RxSwift.framework in Embed Frameworks */,
-				3EDB34FE2304567D009451C8 /* RxWatchConnectivity.framework in Embed Frameworks */,
+				3EDB357F23046E6B009451C8 /* RxWatchConnectivity.framework in Embed Frameworks */,
+				3EDB355023046C24009451C8 /* RxCocoa.framework in Embed Frameworks */,
+				3EDB355123046C24009451C8 /* RxRelay.framework in Embed Frameworks */,
+				3EDB355223046C24009451C8 /* RxSwift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -100,8 +141,10 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				3EDB350323045685009451C8 /* RxSwift.framework in Embed Frameworks */,
-				3EDB350123045685009451C8 /* RxWatchConnectivity.framework in Embed Frameworks */,
+				3EDB358323046E8C009451C8 /* RxWatchConnectivity.framework in Embed Frameworks */,
+				3EDB354A23046C17009451C8 /* RxCocoa.framework in Embed Frameworks */,
+				3EDB354B23046C17009451C8 /* RxRelay.framework in Embed Frameworks */,
+				3EDB354C23046C17009451C8 /* RxSwift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -130,10 +173,13 @@
 		3EDB34CC2304549B009451C8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3EDB34CE2304549B009451C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3EDB34CF2304549B009451C8 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
-		3EDB34EF2304564C009451C8 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = SOURCE_ROOT; };
-		3EDB34F123045653009451C8 /* RxWatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxWatchConnectivity.framework; path = Carthage/Build/iOS/RxWatchConnectivity.framework; sourceTree = SOURCE_ROOT; };
-		3EDB34F32304565B009451C8 /* RxWatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxWatchConnectivity.framework; path = Carthage/Build/watchOS/RxWatchConnectivity.framework; sourceTree = SOURCE_ROOT; };
-		3EDB34F523045661009451C8 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/watchOS/RxSwift.framework; sourceTree = SOURCE_ROOT; };
+		3EDB352F23046AEE009451C8 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxSwift.framework; sourceTree = "<group>"; };
+		3EDB353D23046BED009451C8 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxCocoa.framework; sourceTree = "<group>"; };
+		3EDB353E23046BED009451C8 /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxRelay.framework; sourceTree = "<group>"; };
+		3EDB354123046BF8009451C8 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxCocoa.framework; sourceTree = "<group>"; };
+		3EDB354223046BF8009451C8 /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxRelay.framework; sourceTree = "<group>"; };
+		3EDB354323046BF8009451C8 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RxSwift.framework; sourceTree = "<group>"; };
+		3EDB356E23046D5E009451C8 /* RxWatchConnectivity.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RxWatchConnectivity.xcodeproj; path = ../../RxWatchConnectivity.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,10 +187,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3EDB350223045685009451C8 /* RxSwift.framework in Frameworks */,
-				3EDB34F723045669009451C8 /* RxWatchConnectivity.framework in Frameworks */,
-				3EDB34F823045669009451C8 /* RxSwift.framework in Frameworks */,
-				3EDB350023045685009451C8 /* RxWatchConnectivity.framework in Frameworks */,
+				3EDB358223046E88009451C8 /* RxWatchConnectivity.framework in Frameworks */,
+				3EDB354723046C0E009451C8 /* RxCocoa.framework in Frameworks */,
+				3EDB354823046C0E009451C8 /* RxRelay.framework in Frameworks */,
+				3EDB354923046C0E009451C8 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,10 +205,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3EDB34F923045674009451C8 /* RxSwift.framework in Frameworks */,
-				3EDB34FD2304567D009451C8 /* RxWatchConnectivity.framework in Frameworks */,
-				3EDB34FA23045674009451C8 /* RxWatchConnectivity.framework in Frameworks */,
-				3EDB34FB2304567D009451C8 /* RxSwift.framework in Frameworks */,
+				3EDB357E23046E65009451C8 /* RxWatchConnectivity.framework in Frameworks */,
+				3EDB354D23046C1E009451C8 /* RxCocoa.framework in Frameworks */,
+				3EDB354E23046C1E009451C8 /* RxRelay.framework in Frameworks */,
+				3EDB354F23046C1E009451C8 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -172,7 +218,8 @@
 		3EDB348C23045498009451C8 = {
 			isa = PBXGroup;
 			children = (
-				3EDB34E0230455BD009451C8 /* Frameworks */,
+				3EDB356E23046D5E009451C8 /* RxWatchConnectivity.xcodeproj */,
+				3EDB352C23046A97009451C8 /* Frameworks */,
 				3EDB349723045498009451C8 /* ProjectExample */,
 				3EDB34AC2304549A009451C8 /* ProjectExampleTests */,
 				3EDB34B62304549A009451C8 /* ProjectExample WatchKit App */,
@@ -237,31 +284,43 @@
 			path = "ProjectExample WatchKit Extension";
 			sourceTree = "<group>";
 		};
-		3EDB34E0230455BD009451C8 /* Frameworks */ = {
+		3EDB352C23046A97009451C8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3EDB34E2230455D1009451C8 /* watchOS */,
-				3EDB34E1230455CD009451C8 /* iOS */,
+				3EDB352E23046AA0009451C8 /* watchOS */,
+				3EDB352D23046A9D009451C8 /* iOS */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";
 		};
-		3EDB34E1230455CD009451C8 /* iOS */ = {
+		3EDB352D23046A9D009451C8 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				3EDB34F123045653009451C8 /* RxWatchConnectivity.framework */,
-				3EDB34EF2304564C009451C8 /* RxSwift.framework */,
+				3EDB353D23046BED009451C8 /* RxCocoa.framework */,
+				3EDB353E23046BED009451C8 /* RxRelay.framework */,
+				3EDB352F23046AEE009451C8 /* RxSwift.framework */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
 		};
-		3EDB34E2230455D1009451C8 /* watchOS */ = {
+		3EDB352E23046AA0009451C8 /* watchOS */ = {
 			isa = PBXGroup;
 			children = (
-				3EDB34F523045661009451C8 /* RxSwift.framework */,
-				3EDB34F32304565B009451C8 /* RxWatchConnectivity.framework */,
+				3EDB354123046BF8009451C8 /* RxCocoa.framework */,
+				3EDB354223046BF8009451C8 /* RxRelay.framework */,
+				3EDB354323046BF8009451C8 /* RxSwift.framework */,
 			);
 			path = watchOS;
+			sourceTree = "<group>";
+		};
+		3EDB356F23046D5E009451C8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3EDB357523046D5E009451C8 /* RxWatchConnectivity.framework */,
+				3EDB357723046D5E009451C8 /* RxWatchConnectivity iOSTests.xctest */,
+				3EDB357923046D5E009451C8 /* RxWatchConnectivity.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,6 +339,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				3EDB358123046E73009451C8 /* PBXTargetDependency */,
 				3EDB34B52304549A009451C8 /* PBXTargetDependency */,
 			);
 			name = ProjectExample;
@@ -334,6 +394,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				3EDB357D23046E46009451C8 /* PBXTargetDependency */,
 			);
 			name = "ProjectExample WatchKit Extension";
 			productName = "ProjectExample WatchKit Extension";
@@ -376,6 +437,12 @@
 			mainGroup = 3EDB348C23045498009451C8;
 			productRefGroup = 3EDB349623045498009451C8 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 3EDB356F23046D5E009451C8 /* Products */;
+					ProjectRef = 3EDB356E23046D5E009451C8 /* RxWatchConnectivity.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				3EDB349423045498009451C8 /* ProjectExample */,
@@ -385,6 +452,30 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		3EDB357523046D5E009451C8 /* RxWatchConnectivity.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RxWatchConnectivity.framework;
+			remoteRef = 3EDB357423046D5E009451C8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3EDB357723046D5E009451C8 /* RxWatchConnectivity iOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "RxWatchConnectivity iOSTests.xctest";
+			remoteRef = 3EDB357623046D5E009451C8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3EDB357923046D5E009451C8 /* RxWatchConnectivity.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RxWatchConnectivity.framework;
+			remoteRef = 3EDB357823046D5E009451C8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		3EDB349323045498009451C8 /* Resources */ = {
@@ -468,6 +559,16 @@
 			isa = PBXTargetDependency;
 			target = 3EDB34C02304549A009451C8 /* ProjectExample WatchKit Extension */;
 			targetProxy = 3EDB34C32304549A009451C8 /* PBXContainerItemProxy */;
+		};
+		3EDB357D23046E46009451C8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "RxWatchConnectivity iOS";
+			targetProxy = 3EDB357C23046E46009451C8 /* PBXContainerItemProxy */;
+		};
+		3EDB358123046E73009451C8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "RxWatchConnectivity iOS";
+			targetProxy = 3EDB358023046E73009451C8 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -624,6 +725,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+					"$(PROJECT_DIR)/Frameworks/watchOS",
 				);
 				INFOPLIST_FILE = "ProjectExample WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -650,6 +752,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+					"$(PROJECT_DIR)/Frameworks/watchOS",
 				);
 				INFOPLIST_FILE = "ProjectExample WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -715,6 +818,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+					"$(PROJECT_DIR)/Frameworks/iOS",
+					"$(PROJECT_DIR)/Frameworks/watchOS",
 				);
 				INFOPLIST_FILE = ProjectExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -738,6 +843,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+					"$(PROJECT_DIR)/Frameworks/iOS",
+					"$(PROJECT_DIR)/Frameworks/watchOS",
 				);
 				INFOPLIST_FILE = ProjectExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3EDB3450230332ED009451C8"
-               BuildableName = "RxWatchConnectivity_watchOS.framework"
+               BuildableName = "RxWatchConnectivity.framework"
                BlueprintName = "RxWatchConnectivity watchOS"
                ReferencedContainer = "container:RxWatchConnectivity.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3EDB3450230332ED009451C8"
-            BuildableName = "RxWatchConnectivity_watchOS.framework"
+            BuildableName = "RxWatchConnectivity.framework"
             BlueprintName = "RxWatchConnectivity watchOS"
             ReferencedContainer = "container:RxWatchConnectivity.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3EDB3450230332ED009451C8"
-            BuildableName = "RxWatchConnectivity_watchOS.framework"
+            BuildableName = "RxWatchConnectivity.framework"
             BlueprintName = "RxWatchConnectivity watchOS"
             ReferencedContainer = "container:RxWatchConnectivity.xcodeproj">
          </BuildableReference>

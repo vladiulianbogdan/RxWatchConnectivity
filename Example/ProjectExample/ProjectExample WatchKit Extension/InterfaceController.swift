@@ -13,11 +13,26 @@ import RxWatchConnectivity
 
 class InterfaceController: WKInterfaceController {
     let session = RxWCSession()
+    
+    private let disposeBag = DisposeBag()
 
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
 
-        session.activate()
+        print(session.activate())
+        
+        session.activationState
+            .subscribe(onNext: { state in
+                print("New state is \(state.rawValue)")
+            })
+            .disposed(by: disposeBag)
+        
+        session.didReceiveMessageWithReplyHandler
+            .subscribe(onNext: { (message, replyHandler) in
+                print(message)
+                replyHandler(["response": "hello world!"])
+            })
+            .disposed(by: disposeBag)
         // Configure interface objects here.
     }
     
