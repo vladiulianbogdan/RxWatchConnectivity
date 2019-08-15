@@ -16,6 +16,8 @@ public enum RxWCSessionError: Error {
 
 public class RxWCSession {
     // Session states
+
+    /// Observable that emits whenever the activation state of the session changes. On subscription it emits the current state.
     public var activationState: Observable<WCSessionActivationState> {
         return .deferred { [delegate, session] in
             return delegate.activationDidComplete
@@ -24,6 +26,7 @@ public class RxWCSession {
         }
     }
 
+    /// Observable that emits whenever the rechability state of the session changes. On subscription it emits the current state.
     public var isReachable: Observable<Bool> {
         return .deferred { [delegate, session] in
             return delegate.sessionReachabilityDidChange
@@ -32,6 +35,7 @@ public class RxWCSession {
         }
     }
 
+    /// Observable that emits whenever the value of the outstanding file transfer array changes. On subscription it emits the current state.
     public var outstandingFileTransfers: Observable<[WCSessionFileTransfer]> {
         return .deferred { [delegate, session] in
             return delegate.didFinishFileTransfer
@@ -42,16 +46,26 @@ public class RxWCSession {
     
     // Receiving data
 
+    /// Observable that emits whenever a message without reply handler is received.
     public var didReceiveMessage: Observable<[String: Any]> {
         return delegate.didReceiveMessage
     }
 
+    /// Observable that emits whenever a message with a reply handler is received.
+    /// The emited value is a tupple containing the received message and a reply callback.
     public var didReceiveMessageWithReplyHandler: Observable<([String: Any], ([String : Any]) -> Void)> {
         return delegate.didReceiveMessageWithReplyHandler
     }
 
+    /// Observable that emits whenever a data message without a reply handler is received.
     public var didReceiveMessageData: Observable<Data> {
         return delegate.didReceiveMessageData
+    }
+
+    /// Observable that emits whenever a data message with a reply handler is received.
+    /// The emited value is a tupple containing the received data message and a reply callback.
+    public var didReceiveMessageDataWithReplyHandler: Observable<(Data, (Data) -> Void)> {
+        return delegate.didReceiveMessageDataWithReplyHandler
     }
 
     private let session: WCSession
@@ -63,7 +77,7 @@ public class RxWCSession {
 
         session.delegate = delegate
     }
-    
+
     public func activate() -> Bool {
         guard WCSession.isSupported() else {
             return false
