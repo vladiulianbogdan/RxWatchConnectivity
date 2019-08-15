@@ -12,15 +12,14 @@ import RxCocoa
 import RxWatchConnectivity
 
 class ViewController: UIViewController {
-    
     @IBOutlet var messageTextField: UITextField!
     @IBOutlet var sessionStateLabel: UILabel!
     @IBOutlet var reachableStateLabel: UILabel!
 
-    var session = RxWCSession()
-    
+    let session = RxWCSession()
+
     private let disposeBag = DisposeBag()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

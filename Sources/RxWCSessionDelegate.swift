@@ -12,19 +12,19 @@ class RxWCSessionDelegate: NSObject, WCSessionDelegate {
     public var activationDidComplete: Observable<(WCSessionActivationState, Error?)> {
         return activationDidCompleteSubject.asObservable()
     }
-    
+
     #if os(iOS)
     public var sessionDidBecomeInactive: Observable<WCSession> {
         return sessionDidBecomeInactiveSubject.asObservable()
     }
-    
+
     public var sessionDidDeactivate: Observable<WCSession> {
         return sessionDidDeactivateSubject.asObservable()
     }
     #endif
 
     public var sessionReachabilityDidChange: Observable<WCSession> {
-        return sessionReachabilityDidChangeSubject.asObservable()
+        return sessionReachabilityDidChangeSubject.asObservable().debug("Qweeee")
     }
     
     public var didReceiveMessage: Observable<[String: Any]> {

@@ -15,7 +15,6 @@ public enum RxWCSessionError: Error {
 }
 
 public class RxWCSession {
-    
     // Session states
     public var activationState: Observable<WCSessionActivationState> {
         return .deferred { [delegate, session] in
