@@ -40,6 +40,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		3E4DE8A7231C5E2B00C2821F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3EDB356E23046D5E009451C8 /* RxWatchConnectivity.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 3EDB3450230332ED009451C8;
+			remoteInfo = "RxWatchConnectivity watchOS";
+		};
 		3EDB34AA2304549A009451C8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3EDB348D23045498009451C8 /* Project object */;
@@ -81,13 +88,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = 3EDB3451230332ED009451C8;
 			remoteInfo = "RxWatchConnectivity watchOS";
-		};
-		3EDB357C23046E46009451C8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3EDB356E23046D5E009451C8 /* RxWatchConnectivity.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 3EDB3433230332AC009451C8;
-			remoteInfo = "RxWatchConnectivity iOS";
 		};
 		3EDB358023046E73009451C8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -394,7 +394,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				3EDB357D23046E46009451C8 /* PBXTargetDependency */,
+				3E4DE8A8231C5E2B00C2821F /* PBXTargetDependency */,
 			);
 			name = "ProjectExample WatchKit Extension";
 			productName = "ProjectExample WatchKit Extension";
@@ -545,6 +545,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		3E4DE8A8231C5E2B00C2821F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "RxWatchConnectivity watchOS";
+			targetProxy = 3E4DE8A7231C5E2B00C2821F /* PBXContainerItemProxy */;
+		};
 		3EDB34AB2304549A009451C8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 3EDB349423045498009451C8 /* ProjectExample */;
@@ -559,11 +564,6 @@
 			isa = PBXTargetDependency;
 			target = 3EDB34C02304549A009451C8 /* ProjectExample WatchKit Extension */;
 			targetProxy = 3EDB34C32304549A009451C8 /* PBXContainerItemProxy */;
-		};
-		3EDB357D23046E46009451C8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "RxWatchConnectivity iOS";
-			targetProxy = 3EDB357C23046E46009451C8 /* PBXContainerItemProxy */;
 		};
 		3EDB358123046E73009451C8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

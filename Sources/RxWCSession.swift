@@ -12,6 +12,7 @@ public enum RxWCSessionError: Error {
     case watchAppIsNotInstalled
     case sessionIsNotActivated
     case counterpartAppIsNotReachable
+    case unsupported
 }
 
 public class RxWCSession {
@@ -71,6 +72,9 @@ public class RxWCSession {
     private let session: WCSession
     private let delegate: RxWCSessionDelegate
 
+    /// Constructor for RxWCSession.
+    ///
+    /// - Parameter session: A session that will be wrapped by the Rx layer.
     public init(session: WCSession = WCSession.default) {
         self.session = session
         self.delegate = RxWCSessionDelegate()
@@ -78,16 +82,38 @@ public class RxWCSession {
         session.delegate = delegate
     }
 
-    public func activate() -> Bool {
-        guard WCSession.isSupported() else {
-            return false
+    /// Activate the session.
+    ///
+    /// - Returns: A Completable that completes when the session was activated or errors if an error occurs.
+    public func activate() -> Completable {
+        return Completable.deferred { [delegate] in
+            guard WCSession.isSupported() else {
+                throw RxWCSessionError.unsupported
+            }
+
+            return delegate.activationDidComplete
+                .map { state, error in
+                    if let error = error {
+                        throw error
+                    }
+
+                    return state == .activated
+                }
+                .filter { $0 == true }
+                .take(1)
+                .ignoreElements()
         }
-
-        session.activate()
-
-        return true
+        .do(onSubscribed: { [session] in
+            session.activate()
+        })
     }
 
+    /// Sends a message with reply.
+    ///
+    /// - Parameters:
+    ///   - message: The message that will be sent.
+    ///   - waitForSession: true if the session is waited to be started or false if the Single should fail if the session is not started.
+    /// - Returns: A Single that emits the reply message or error if an error occured.
     public func sendMessage(_ message: [String: Any], waitForSession: Bool = true) -> Single<[String: Any]> {
         let sendMessage = Single<[String: Any]>.create { [session] observer in
             session.sendMessage(message, replyHandler: { message in
@@ -105,10 +131,16 @@ public class RxWCSession {
             }
     }
 
-    public func sendMessageWithoutReply(_ message: [String: Any], waitForSession: Bool = true) -> Observable<Void> {
-        let sendMessage = Observable<Void>.create { [session] observer in
+    /// Sends a message without reply.
+    ///
+    /// - Parameters:
+    ///   - message: The message that will be sent.
+    ///   - waitForSession: true if the session is waited to be started or false if the Single should fail if the session is not started.
+    /// - Returns: A Completable that emits and error if an error occured. The Completable never completes because there is no way to know if the message transfer has completed.
+    public func sendMessageWithoutReply(_ message: [String: Any], waitForSession: Bool = true) -> Completable {
+        let sendMessage = Completable.create { [session] observer in
             session.sendMessage(message, replyHandler: nil, errorHandler: { error in
-                observer.onError(error)
+                observer(.error(error))
             })
 
             return Disposables.create()
@@ -119,8 +151,15 @@ public class RxWCSession {
             .flatMap { _ in
                 return sendMessage
             }
+            .ignoreElements()
     }
 
+    /// Sends a data message with reply.
+    ///
+    /// - Parameters:
+    ///   - messageData: The message data that will be sent.
+    ///   - waitForSession: true if the session is waited to be started or false if the Single should fail if the session is not started.
+    /// - Returns: A Single that emits the reply message or error if an error occured.
     public func send(messageData: Data, waitForSession: Bool = true) -> Single<Data> {
         let sendMessageData = Single<Data>.create { [session] observer in
             session.sendMessageData(messageData, replyHandler: { data in
@@ -138,10 +177,16 @@ public class RxWCSession {
             }
     }
 
-    public func sendWithoutReply(messageData: Data, waitForSession: Bool = true) -> Observable<Void> {
-        let sendMessageData = Observable<Void>.create { [session] observer in
+    /// Sends a message without reply.
+    ///
+    /// - Parameters:
+    ///   - message: The message that will be sent.
+    ///   - waitForSession: true if the session is waited to be started or false if the Single should fail if the session is not started.
+    /// - Returns: A Completable that emits and error if an error occured. The Completable never completes because there is no way to know if the message transfer has completed.
+    public func sendWithoutReply(messageData: Data, waitForSession: Bool = true) -> Completable {
+        let sendMessageData = Completable.create { [session] observer in
             session.sendMessageData(messageData, replyHandler: nil, errorHandler: { error in
-                observer.onError(error)
+                observer(.error(error))
             })
 
             return Disposables.create()
@@ -152,8 +197,16 @@ public class RxWCSession {
             .flatMap { _ in
                 sendMessageData
             }
+            .ignoreElements()
     }
 
+    /// Sends a file.
+    ///
+    /// - Parameters:
+    ///   - file: The URL of the file that will be transfered.
+    ///   - metadata: The metadata of the file.
+    /// - Returns: Observable that emits the Progress object that can be used to track the progress of the file transfer.
+    ///                     The Observable will complete when the transfer finishes. If the subscription is disposed, the file transfer will be canceled.
     public func transferFile(_ file: URL, metadata: [String : Any]?) -> Observable<Progress> {
         return .create { [session, delegate] observer in
             let fileTransfer = session.transferFile(file, metadata: metadata)
@@ -185,7 +238,12 @@ public class RxWCSession {
         }
     }
 
-    public func transferUserInfo(_ userInfo: [String : Any] = [:]) -> Observable<Void> {
+    /// Sends the user info.
+    ///
+    /// - Parameter userInfo: The user info dictionary that will be sent.
+    /// - Returns: Completable that completes when the user info has been sent successfully.
+    ///                    If the subscription is disposed, the transfer will be canceled.
+    public func transferUserInfo(_ userInfo: [String : Any] = [:]) -> Completable {
         return .create { [session, delegate] observer in
             let userInfoTransfer = session.transferUserInfo(userInfo)
             let compositeDisposable = CompositeDisposable()
@@ -197,10 +255,10 @@ public class RxWCSession {
                     }
 
                     if let error = error {
-                        observer.onError(error)
+                        observer(.error(error))
                     }
 
-                    observer.onCompleted()
+                    observer(.completed)
                 })
 
             let fileTransferDisposable = Disposables.create {

@@ -43,7 +43,7 @@ class InterfaceController: WKInterfaceController {
     }
     
     @IBAction func activateSessionButtonPressed() {
-        session.activate()
+        _ = session.activate().subscribe()
     }
 
     override func willActivate() {
